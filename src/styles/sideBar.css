@@ -7,43 +7,186 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-#main {
+#layout {
     width: 100%;
-    display: grid;
-    grid-template-columns: 130px auto ;
-    
 }
 
+#layout .header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+} 
 
-#sideBar {
-    width: 130px;
-    height: 100vh;
+#layout .header .logo-container {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#layout .logo-container>.logo {
+    width: 30px;
+    height: 30px;
+}
+#layout .header>.data-container {
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#layout .header .left-side {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#layout .header .left-side>.icon {
+    color: #fff;
+    font-size: 20px;
+        
+}
+#layout .header .left-side>.text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+#layout .header .right-side {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 33px;
+}
+#layout .right-side .manage-toll-container {
+    width: 136px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+#layout .manage-toll-container>.select-tool {
+    width: 100%;
+    size: 13px;
+    color: #999fc0;
+    background-color: transparent;
+    border: none;
+}
+#layout .manage-toll-container>.grid-icon {
+    color: #222234;
+    width: 15px;
+    background-color: #999fc0;
+    border: none;
+
+    
+}
+#layout .profile-container {
+    width: fit-content;
+    position: relative;
+}
+#layout .profile-container>.user {
+    border: 1px solid #999fc0;
+    border-radius: 3px;
+    color: #999fc0;
+    width: 26px;
+    height: 26px;
+}
+#layout .profile-container>.bars {
+    width: 13px;
+    height: 13px;
+    color: #999fc0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #222234;
+}
+#data {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#data .side-bar-container {
+    width: 100px;
+    height: calc(100vh - 50px);
     min-height: 800px;
-    padding: 10px;
+    padding-top: 40px;
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#sideBar .logo-container {
-    width: 40px;
-    margin-bottom: 1.5rem;
+
+#data .side-bar-container>ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
+#data .link-item .icon {
+    color: #7E83A0;
+    font-size: 20px;
+    text-align: center;
+}
+#data .link-item .text {
+    color: #7E83A0;
+    font-size: 10px;
+    text-align: center;
+}
+
+#data .link-item .active-link .text {
+    font-weight: bold;
+    color: #fff;
+}
+
+#data .link-item .active-link .icon {
+    color: #fff;
+}
+
+#data .child {
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #2B2B41;
+}
+
+
+
+
+
+/* 
+#sideBar {
+    width: 100px;
+    height: 100vh;
+    min-height: 800px;
+    padding-top: 10px;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
 #sideBar .side-bar-container>ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 30px;
 }
 #sideBar .link-item .icon {
     color: #7E83A0;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 #sideBar .link-item .text {
     color: #7E83A0;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 10px;
     text-align: center;
 }
 
@@ -58,14 +201,12 @@
 #main .data-side {
     width: 100%;
 }
-.data-side .header {
-    width: 100%;
-    height: 80px;
-    background-color: var(--bg-color);
-}
+
 .data-side .child {
-    border: 1px solid red;
-}
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #2B2B41;
+} */
 
 
 

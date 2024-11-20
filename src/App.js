@@ -6,7 +6,7 @@ import './App.css';
 
 // component
 import SideBar from '../src/components/SideBar'
-import Home from '../src/pages/Home'
+import FindCompany from './pages/FindCompany';
 import PartnerCompany from '../src/pages/PartnerCompany'
 import Message from '../src/pages/Message';
 
@@ -18,7 +18,7 @@ function App() {
         <SideBar >
           <div className="content">
             <Routes>
-              <Route path='/' element={ <Home /> } />
+              <Route path='/' element={ <FindCompany /> } />
               <Route path='/partner/company' element={ <PartnerCompany /> } />
               <Route path='/message' element={ <Message /> } />
             </Routes>
