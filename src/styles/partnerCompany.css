@@ -12,12 +12,111 @@
     display: flex;
     flex-direction: row;
     padding-right: 34px;
+    gap: 20px;
     
 }
 
-#partnerCompany .data-container {
+#partnerCompany>.data-container {
     width: calc(100% - 310px);
+    
 }
+
+#partnerCompany .data-container>.data-header {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #999fc0;
+}
+
+#partnerCompany .data-header>.right-side {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 33px;
+}
+#partnerCompany .data-header>.right-side>.group {
+    font-size: 16px;
+    color: #999fc0;
+}
+#partnerCompany .data-header>.right-side .select-type {
+    width: 150px;
+    padding: 7px;
+    color: #222234;
+    background-color: #C2C5D9;
+    border: none;
+    border-radius: 5px;
+}
+
+#partnerCompany .data-header>.tabs-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+#partnerCompany .data-header>.tabs-container>.tab {
+    width: fit-content;
+    height: 44px;
+    padding: 12px;
+    color: #555B76;
+    background-color: #353A4F;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+#partnerCompany .data-header>.tabs-container>.active-tab {
+    background-color: #999FC0;
+    color: #222234;
+}
+#partnerCompany .data-header>.tabs-container>.tab .icon {
+    font-size: 22px;
+}
+#partnerCompany .tabs-container>.tab>.confirmation-icon {
+    position: relative;
+    margin-right: 5px;
+}
+#partnerCompany .tabs-container>.tab>.confirmation-icon>.bars-icon {
+    position: absolute;
+    bottom: -2px;
+    right: -8px;
+    font-size: 15px;
+    
+}
+
+#partnerCompany .data-container .content-container .all-content {
+    display: none;
+}
+#partnerCompany .data-container .content-container .partner-content {
+    display: none;
+}
+#partnerCompany .data-container .content-container .permission-content {
+    display: none;
+}
+#partnerCompany .data-container .content-container .confirmation-content {
+    display: none;
+}
+
+
+#partnerCompany .data-container>.content-container .active-content {
+    display: block;
+}
+
+
+
+
+
+/* ............................... */
 #partnerCompany .search-container {
     width: 310px;
     padding-top: 56px;
