@@ -17,8 +17,8 @@
 }
 
 #partnerCompany>.data-container {
-    width: calc(100% - 310px);
-    
+    /* width: calc(100% - 310px); */
+    width: 100%;
 }
 
 #partnerCompany .data-container>.data-header {
@@ -95,7 +95,10 @@
 }
 
 #partnerCompany .data-container .content-container .all-content {
+    width: 100%;
+    height: calc(100vh - 110px);
     display: none;
+    overflow-y: scroll;
 }
 #partnerCompany .data-container .content-container .partner-content {
     display: none;
@@ -112,6 +115,159 @@
     display: block;
 }
 
+#partnerCompany .data-container .all-content>.content-row {
+    width: 100%;
+    height: 196px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 30px;
+    border-bottom: 1px solid #C2C5D9;
+    gap: 10px;
+}
+#partnerCompany .data-container .content-row:nth-child(odd) {
+    background-color: #555B76;
+}
+#partnerCompany .data-container .content-row:nth-child(even) {
+    background-color: #3B4057;
+}
+
+#partnerCompany .all-content .content-row>.profile-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#partnerCompany .all-content .content-row>.profile-container>img {
+    width: 100%;
+    height: 100%;
+}
+#partnerCompany .data-container .content-container .all-content-data {
+    width: 100%;
+}
+#partnerCompany .data-container .all-content>.content-row>.next {
+   width: fit-content;
+   align-self: center;
+   cursor: pointer;
+}
+#partnerCompany .data-container .all-content>.content-row>.next>.icon {
+    font-size: 30px;
+    
+    color: #999FC0;
+}
+
+#partnerCompany .all-content .content-row .all-content-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#partnerCompany .all-content .content-row .all-content-header>.company-name {
+    width: fit-content;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+#partnerCompany .all-content .content-row .all-content-header>.right-side {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+#partnerCompany .all-content-header>.right-side>.icon-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+} 
+#partnerCompany .all-content-header>.right-side>.icon-container>.icon {
+    color: #FFF;
+    font-size: 16px;
+}
+#partnerCompany .all-content-header>.right-side>.order-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#partnerCompany .all-content-header>.right-side>.order-container>.orders {
+    width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid #FF9D00;
+    background-color: transparent;
+    color: #C2C5D9;
+    border-radius: 2px;
+    font-size: 10px;
+    cursor: pointer;
+}
+#partnerCompany .all-content-header>.right-side>.order-container>.order {
+    width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid #03A323;
+    background-color: transparent;
+    color: #C2C5D9;
+    border-radius: 2px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#partnerCompany .data-container .content-container .all-content-data>.content-text {
+    font-size: 13px;
+    color: #C2C5D9;
+    margin-bottom: 10px;
+}
+#partnerCompany .all-content-data>.detail-container .detail-location-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    
+}
+#partnerCompany .all-content-data>.detail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#partnerCompany .all-content-data>.detail-container .location,
+#partnerCompany .all-content-data>.detail-container .tool
+{
+    min-width: 170px;
+    color: #C2C5D9;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+#partnerCompany .all-content-data>.detail-container .detail-type>.grid-item {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    justify-content: start;
+    gap: 10px;
+    color: #C2C5D9;
+}
+
+#partnerCompany .all-content-data>.detail-container>.company>button {
+    padding: 5px 20px;
+    background-color: #007AFF;
+    border-radius: 25px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    box-shadow: 0 3px 6px #00000029;
+    cursor: pointer;
+}
+
+
+
 
 
 
@@ -122,7 +278,7 @@
     padding-top: 56px;
 }
 #partnerCompany .search-bar {
-    width: 310px;
+    width: 100%;
     padding: 7px 10px;
     background-color: #c2c5d9;
     display: flex;
@@ -149,7 +305,7 @@
 }
 
 #partnerCompany .filter-container {
-    width: 310px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -229,27 +385,66 @@
 }
 #partnerCompany .filter-type .check-container {
     display: flex;
-    gap: 20px;
-}
-#partnerCompany .filter-type .check-container .select {
-    width: 34px;
-    height: 34px;
-    background-color: #2b2b41;
-    
-}
-#partnerCompany .filter-type .check-container>.row {
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
 }
+
+
 #partnerCompany .filter-type .check-container .label {
+    width: fit-content;
+    position: relative;
     color: #c2c5d9;
     font-size: 13px;
+    padding-left: 40px;
+    padding-top: 10px;
+    display: block;
+    /* border: 1px solid red; */
+    
+}
+#partnerCompany .filter-type .check-container .select {
+    /* width: 34px;
+    height: 34px;
+    background-color: #2b2b41; */
+    width: 0;
+    height: 0;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    /* border-radius: 5px; */
+    
 }
 
+#partnerCompany .filter-type .check-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+}
+#partnerCompany .filter-type .check-container .select:checked  {
+    width: 30px;
+    height: 30px;
+}
+#partnerCompany .filter-type .check-container .checkmark:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #C2C5D9;
+    border-radius: 5px;
+}
 
+@media (max-width: 1300px ) {
+    #partnerCompany {
+        padding-right: 20px;
+    }
+
+    /* ......search container........ */
+    #partnerCompany .search-container {
+        width: 300px;
+    }
+}
 
 
 
