@@ -4,6 +4,9 @@ import { faGlobe, faMagnifyingGlass, faXmark, faScrewdriverWrench, faChevronDown
 import { faHourglassHalf } from '@fortawesome/free-regular-svg-icons'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
+// component 
+import ConstructionModal from '../modals/ConstructionModal'
+
 // css
 import '../styles/partnerCompany.css'
 // image
@@ -16,6 +19,16 @@ function PartnerCompany() {
     const toggleTab = (tab_number) => {
         setToggleState(tab_number)
     }
+
+    // construction open modal
+    const [ openConstModal, setOpenConstModal ] = useState(false);
+    const [testState, setTestState] = useState(false);
+    const constOpenModal = (e) => {
+        e.stopPropagation();
+            setOpenConstModal(true);
+        }
+    
+        
 
     return (
         <div id='partnerCompany'>
@@ -403,14 +416,17 @@ function PartnerCompany() {
                         </div>
                         <div className="data-container">
                                 <div className="type"> 工事種別を選択 </div>
-                                <div className="data">
-                                    <div className="display"></div>
+                                <ConstructionModal open={openConstModal} onClose={() => setOpenConstModal(false)} />
+                                <div className="data" onClick={constOpenModal}>
+                                    <div className="display" >
+                                            <span>--複数選択可能--</span>
+                                    </div>
                                     <div className="icon">
                                         <FontAwesomeIcon icon={faXmark} />
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </div>
                                 </div>
-                            </div>
+                        </div>
                     </div>
 
                     <div className="filter-type">
@@ -420,7 +436,9 @@ function PartnerCompany() {
                         <div className="data-container">
                                 <div className="type"> 地域を選択 </div>
                                 <div className="data">
-                                    <div className="display"></div>
+                                    <div className="display">
+                                        <span>--複数選択可能--</span>
+                                    </div>
                                     <div className="icon">
                                         <FontAwesomeIcon icon={faXmark} />
                                         <FontAwesomeIcon icon={faChevronDown} />
